@@ -2,9 +2,13 @@
 
 This project is using ExpressJS, NodeJS, MongoDB and AngularJS. Also bootstrap CSS is used for some quick styling.
 
+## Installing packages
+
+Before running the app locally you need to run **npm install** both in the root folder and in the server folder.
+
 ## Starting the server
 
-Navigate to the server folder and run ** node server.js **
+Navigate to the server folder and run **node server.js**
 
 ## Functionality
 
