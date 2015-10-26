@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h2>I can haz recipe</h2>
+  <form class="form-inline" ng-submit="search()">
+    <div class="form-group">
+      <input class="form-control" placeholder="Search" type="text" ng-model="searchCriteria">
+      <input class="btn-sm btn-default" type="submit" value="Search">
+    </div>
+  </form>
+</div>
+
+<h2 ng-show="noresults">Sorry, we currently have no recipes for you</h2>
+<div id="results" ng-show="showTable">
+  <input type="text" placeholder="Filter" ng-model="filterRecipe">
+  <table class="table table-striped table-hover">
+    <tr>
+      <th>Name</th>
+      <th>Cooking Time</th>
+      <th>Main Ingredients</th>
+    </tr>
+    <tr ng-repeat="recipe in searchResults | arrayFilter : filterRecipe">
+      <td><a href="#/recipe/{{recipe._id}}">{{recipe.name}}</a></td>
+      <td>{{recipe.cookingTime}}</td>
+      <td>{{getIngredientString(recipe.ingredients)}}</td>
+    </tr>
+  </table>
+</div>

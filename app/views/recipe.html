@@ -1,0 +1,9 @@
+<h1 ng-show="errorMsg">{{pageData.errorMsg}}</h1>
+<div id="recipeResult" ng-show="showPage">
+	<img src="/images/{{pageData.picture}}">
+	<ul class="list-unstyled">
+		<li><h2>{{pageData.name}}</h2></li>
+		<li><h4>Cooking Time:</h4> {{pageData.cookingTime}}</li>
+		<li><h4>Incredients:</h4> {{getIngredientString(pageData.ingredients)}}</li>
+	</ul>
+</div>
